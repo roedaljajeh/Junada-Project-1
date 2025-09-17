@@ -1,0 +1,1047 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(152, 14, 33,0.7);
+    position: fixed;
+    z-index: 1000;
+}
+.home-icon{
+    font-size: 25px;
+    color: white;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+.home-icon:hover{
+    border: 5px solid white;
+    margin: 8px 0 0 15px;
+    border-radius: 50%;
+    color: rgb(129, 9, 9);
+    background-color: white;
+}
+.search-box{
+    width: 250px;
+    height: 30px;
+    border: 0;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 25px;
+    padding-left: 40px;
+}
+.search-icon{
+    font-size: 18px;
+    color: black;
+    margin-left: 35px;
+    margin-top: 17px;
+    position: absolute;
+}
+.header-list{
+    list-style: none;
+    float: right;
+    padding: 13px;
+    font-weight: 900;
+    font-size: 18px;
+}
+.header-list li{
+    display: inline-block;
+    margin-right: 25px;
+}
+.header-list li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: inline-block;
+    height: 28px;
+}
+.header-list li a::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: 0.5s;
+}
+.header-list li a:hover::after{
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    transition: 0.5s;
+}
+.header-dropdown{
+    position: relative;
+}
+.dropdown{
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    width: 180px;
+    line-height: 50px;
+    top: 35px;
+    left: 0px;
+    border: 2px solid rgb(152, 14, 33);
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.header-dropdown:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.dropdown li{
+    margin: auto;
+}
+.dropdown li a{
+    text-decoration: none;
+    color: black; 
+}
+.dropdown li a::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: -20px;
+    left: 0;
+    opacity: 0;
+    background-color: rgb(152, 14, 33);
+    margin-bottom: 5px;
+}
+.dropdown li a:hover::after{
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -20px;
+    opacity: 1;
+    transition: 0.5s;
+}
+.home-page{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/5Z1A3067.png) center;
+    background-size: cover;
+    position: relative;
+}
+.home-page-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.home-page-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    width: 65%;
+    color: white;
+}
+.home-page-logo{
+    width: 400px;
+    height: 200px;
+}
+.home-page-title{
+    font-size: 60px;
+    text-transform: uppercase;
+}
+.home-page-p{
+    color: rgb(199, 197, 197);
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+.home-page-btn{
+    width: 150px;
+    height: 60px;
+    border: 0;
+    border-radius: 15px;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+.home-page-btn2{
+    background-color: rgb(152, 14, 33);
+    color: white;
+}
+.home-page-btn:hover{
+    opacity: 0.7;
+}
+.welcome{
+    width: 100%;
+    height: 100vh;
+}
+.welcome-title-hor{
+    width: 560px;
+    text-align: center;
+    margin: auto;
+}
+.welcome-title{
+    padding: 90px 0 20px 0;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.welcome-hor{
+    margin: auto;
+    height: 4px;
+    width: 150px;
+    background-color: rgb(152, 14, 33);
+    transition: 0.5s;
+}
+.welcome-title-hor:hover .welcome-hor{
+    width: 100%;
+    background-color: black;
+    transition: 0.5s;
+}
+.welcome-container{
+    width: 86%;
+    margin: auto;
+    overflow: auto;
+}
+.welcome-box{
+    width: 28%;
+    margin-top: 90px;
+    height: 210px;
+    border: 1px solid rgb(152, 14, 33);
+    float: left;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+.welcome-box2{
+    margin: 90px 8%;
+}
+.welcome-box i  , .welcome-box-p , .welcome-box a{
+    padding: 15px 0;
+}
+.welcome-box i{
+    color: rgb(152, 14, 33);
+    font-size: 30px;
+}
+.welcome-box-title{
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+.welcome-box-p{
+    color: rgba(0, 0, 0, 0.788);
+    text-transform: capitalize;
+}
+.welcome-box a{
+    text-decoration: none;
+    color: rgb(152, 14, 33);
+    font-size: 18px;
+    text-transform: capitalize;
+    display: block;
+    margin-top: -15px;
+}
+.welcome-box::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: rgba(152, 14, 33, 0.5);
+    border-radius: 15px;
+    z-index: 1;
+}
+.welcome-box:hover::after{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0.5s;
+    z-index: -1;
+}
+.welcome-box:hover a{
+    color: rgb(77, 0, 0);
+    text-decoration: underline;
+}
+.welcome-box:hover i{
+    color: rgb(77, 0, 0);
+}
+.offer{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(245, 255, 253);
+}
+.offer-title-hor{
+    width: 320px;
+    text-align: center;
+    margin: auto;
+}
+.offer-title{
+    padding: 20px 0 15px 0;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.offer-hor{
+    margin: auto;
+    height: 4px;
+    width: 150px;
+    background-color: rgb(152, 14, 33);
+    transition: 0.5s;
+}
+.offer-title-hor:hover .offer-hor{
+    width: 100%;
+    background-color: black;
+    transition: 0.5s;
+}
+.offer-container{
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+}
+.offer-box{
+    width: 320px;
+    margin: 30px 0 0 98px;
+    height: 210px;
+    border: 1px solid rgb(152, 14, 33);
+    float: left;
+    border-radius: 15px;
+    position: relative;
+    padding: 20px 15px;
+    z-index: 1;
+}
+.offer-icon{
+    float: left;
+    margin-top: 5px;
+    font-size: 35px;
+    color: rgb(152, 14, 33);
+}
+.offer-content{
+    width: 220px;
+    float: left;
+    margin-left: 15px;
+}
+.offer-content h2{
+    margin: 7px 0 10px 0;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.offer-content p{
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.719);
+}
+.offer-box::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(152, 14, 33, 0.5);
+    border-radius: 15px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+.offer-box:hover::after{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: 0.5s;
+}
+.offer-box:hover{
+    background-color: white;
+}
+.offer-box:hover .offer-content h2{
+    color: rgb(77, 0, 0);
+    
+}
+.offer-box:hover .offer-icon{
+    color: rgb(77, 0, 0);
+}
+.offer-box:hover .offer-content p{
+    color: black;
+}
+.us{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(235, 255, 249);
+    position: relative;
+}
+.us-container{
+    width: 86%;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.us-content{
+    width: 50%;
+    float: left;
+}
+.us-title{
+    padding: 65px 0 15px 0;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.us-hor{
+    height: 4px;
+    width: 100px;
+    background-color: rgb(152, 14, 33);
+    opacity: 1;
+    transition: 0.5s;
+}
+.us-title-hor{
+    width: 350px;
+}
+.us-title-hor:hover .us-hor{
+    width: 100%;
+    background-color: black;
+    opacity: 1;
+    transition: 0.5s;
+}
+.us-p{
+    color: rgba(0, 0, 0, 0.7);
+    padding: 40px 0 30px 0;
+}
+.us-list{
+    list-style: none;
+    line-height: 3;
+    color: rgba(0,0,0,0.8);
+}
+.us-icon{
+    color: rgb(152, 14, 33);
+    padding-right: 10px;
+}
+.us-img{
+    float: right;
+    padding-top: 25px;
+}
+.us-img1{
+    width: 400px;
+    height: 450px;
+}
+.us-img-list{
+    text-align: center;
+    list-style: none;
+}
+.us-img-list li{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 5px 5px;
+}
+.us-img-li2 , .us-img-li3{
+    background-color: rgb(104, 104, 104);
+}
+.us-img-li2:hover , .us-img-li3:hover , .us-img-li1{
+    background-color: rgb(152, 14, 33);
+    cursor: pointer;
+}
+.featured{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(222, 255, 246);
+}
+.featured-title-hor{
+    width: 360px;
+    text-align: center;
+    margin: auto;
+}
+.featured-title{
+    padding: 20px 0 15px 0;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.featured-hor{
+    margin: auto;
+    height: 4px;
+    width: 150px;
+    background-color: rgb(152, 14, 33);
+    transition: 0.5s;
+}
+.featured-title-hor:hover .featured-hor{
+    width: 100%;
+    background-color: black;
+    transition: 0.5s;
+}
+.featured-container{
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    margin-top: 40px;
+}
+.featured-box{
+    float: left;
+    margin: 0 0 25px 30px;
+    position: relative;
+}
+.featured-box img{
+    width: 300px;
+    height: 200px;
+}
+.featured-box1{
+    margin-left: 60px;
+}
+.featured-box4{
+    margin-left: 60px;
+}
+.featured-box6{
+    width: 300px;
+    height: 200px;
+    background-color: rgb(152, 14, 33, 0.8);
+}
+.featured-box6 h2{
+    text-align: center;
+    font-size: 45px;
+    padding-top: 75px;
+    color: white;
+    text-transform: uppercase;
+}
+.featured-box-overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+.featured-box-overlay h2{
+    font-size: 35px;
+    padding: 30px 0;
+    text-transform: uppercase;
+}
+.featured-box-overlay p{
+    letter-spacing: 3px;
+}
+.featured-box-overlay a{
+    display: inline-block;
+    margin: 30px 0;
+    background-color: white;
+    width: 40px;
+    height: 25px;
+    font-size: 22px;
+    border-radius: 5px;
+    color: black;
+}
+.featured-box:hover .featured-box-overlay{
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+.restaurants{
+    height: 100vh;
+    background-color: rgb(210, 255, 243);
+}
+.restaurants-title-hor{
+    width: 360px;
+    text-align: center;
+    margin: auto;
+}
+.restaurants-title{
+    padding: 20px 0 15px 0;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.restaurants-hor{
+    margin: auto;
+    height: 4px;
+    width: 150px;
+    background-color: rgb(152, 14, 33);
+    transition: 0.5s;
+}
+.restaurants-title-hor:hover .restaurants-hor{
+    width: 100%;
+    background-color: black;
+    transition: 0.5s;
+}
+.restaurants-container{
+    width: 86%;
+    margin: auto;
+    overflow: auto;
+}
+.restaurants-box{
+    width: 28%;
+    height: 350px;
+    margin-top: 70px;
+    border: 1px solid rgb(152, 14, 33);
+    float: left;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+.restaurants-box2{
+    margin: 70px 8%;
+}
+.restaurants-box-img{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 20px;
+    left: 36px;
+}
+.restaurants-box-img img{
+    width: 100%;
+    height: 100%;
+}
+.restaurants-overlay{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 1;
+}
+.restaurants-overlay a{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: rgb(152, 14, 33);
+    font-size: 20px;
+    display: block;
+    margin-left: 210px;
+    line-height: 1.7;
+    border: 0.5px solid rgb(152, 14, 33);
+}
+.restaurants-icon{
+    font-size: 20px;
+}
+.restaurants-overlay a:hover .restaurants-icon{
+    font-size: 50px;
+    margin-left: -50px;
+    opacity: 1;
+    transition: 1s;
+}
+.restaurants-content{
+    width: 50%;
+    position: absolute;
+    top: 280px;
+    left: 25%;
+    text-align: center; 
+}
+.restaurants-content p{
+    padding: 5px 0;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.7);
+}
+.restaurants-box::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(152, 14, 33, 0.5);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+.restaurants-box:hover::after{
+    height: 100%;
+    border-radius: 15px;
+    opacity: 1;
+    transition: 0.5s;
+}
+.restaurants-box:hover{
+    background-color: white;
+    opacity: 1;
+    transition: 2s;
+}
+.restaurants-box:hover .restaurants-overlay{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.restaurants-box:hover .restaurants-content p{
+    color: black;
+}
+.restaurants-box:hover .restaurants-content h2{
+    color: white;
+    opacity: 1;
+    transition: 0.5s;
+}
+.pricing{
+    height: 100vh;
+    background-color: rgb(222, 255, 246);
+}
+.pricing-title-hor{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+.pricing-title{
+    padding: 20px 0 15px 0;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.pricing-hor{
+    margin: auto;
+    height: 4px;
+    width: 150px;
+    background-color: rgb(152, 14, 33);
+    transition: 0.5s;
+}
+.pricing-title-hor:hover .pricing-hor{
+    width: 300px;
+    background-color: black;
+    transition: 0.5s;
+}
+.pricing-container{
+    width: 86%;
+    margin: auto;
+    overflow: auto;
+}
+.pricing-box{
+    width: 28%;
+    margin-top: 45px;
+    border: 1px solid rgb(152, 14, 33);
+    float: left;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.pricing-box2{
+    margin: 45px 8%;
+}
+.pricing-box-title{
+    font-size: 30px;
+    text-transform: capitalize;
+    padding: 30px 0;
+}
+.pricing-box-circle{
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(152, 14, 33);
+    border-radius: 50%;
+    margin: auto;
+    line-height: 3;
+    font-size: 30px;
+}
+.pricing-box-p{
+    text-transform: capitalize;
+    padding-top: 30px;
+    line-height: 0.5;
+}
+.pricing-box-btn{
+    width: 180px;
+    height: 30px;
+    margin: 30px 0;
+    border: 1px solid rgb(152, 14, 33);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.pricing-box-btn:hover{
+    background-color: rgb(152, 14, 33);
+    color: white;
+}
+.pricing-box::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: rgb(152, 14, 33, 0.5);
+    border-radius: 15px;
+    z-index: -1;
+}
+.pricing-box:hover::after{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0.5s;
+}
+.pricing-box:hover .pricing-box-circle{
+    border-color: rgb(255, 255, 255);
+}
+.pricing-box:hover .pricing-box-title{
+    color: rgb(255, 255, 255);
+}
+.guest{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(235, 255, 249);
+    position: relative;
+}
+.guest-container{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 100px;
+}
+.guest-bg{
+    width: 100%;
+    height: 400px;
+    background: url(../images/manager-bg.jpg) no-repeat center fixed;
+    background-size: cover;
+    position: relative;
+}
+.guest-bg-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+.guest-container-content{
+    width: 100%;
+    overflow: auto;
+    padding-top: 110px;
+    position: absolute;
+}
+.guest-content{
+    width: 27%;
+    float: left;
+    margin-left: 15.3%;
+    font-size: 16px;
+    color: white;
+    position: relative;
+}
+.guest-content img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.guest-content h2,h3{
+    position: absolute;
+    top: 16px;
+    left: 120px;
+    font-size: 35px;
+}
+.guest-title{
+    top: 70px;
+    font-size: 20px
+}
+.guest-p{
+    padding-top: 20px;
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+.flights{
+    height: 100vh;
+    background-color: rgb(245, 255, 253);
+}
+.flights-title-hor{
+    width: 360px;
+    text-align: center;
+    margin: auto;
+}
+.flights-title{
+    padding: 10px 0 15px 0;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.flights-hor{
+    margin: auto;
+    height: 4px;
+    width: 150px;
+    background-color: rgb(152, 14, 33);
+    transition: 0.5s;
+}
+.flights-title-hor:hover .flights-hor{
+    width: 100%;
+    background-color: black;
+    transition: 0.5s;
+}
+.flights-container{
+    width: 86%;
+    margin: auto;
+    overflow: auto;
+}
+.flights-box{
+    width: 28%;
+    margin-top: 20px;
+    border: 1px solid rgb(152, 14, 33);
+    float: left;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.flights-box2{
+    margin: 20px 8%;
+}
+.flights-img{
+    width: 250px;
+    height: 270px;
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+}
+.flights-icon{
+    font-size: 20px;
+    margin: 15px 5px;
+    color: rgb(152, 14, 33);
+}
+.flights-box span{
+    margin-right: 10px;
+}
+.flights-content p{
+    padding: 10px 0;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.7);
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+.flights-read-more{
+    display: block;
+    text-decoration: none;
+    color: rgb(152, 14, 33);
+    margin-bottom: 10px;
+}
+.flights-box::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(152, 14, 33, 0.5);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+.flights-box:hover::after{
+    height: 100%;
+    border-radius: 15px;
+    opacity: 1;
+    transition: 0.5s;
+}
+.flights-box:hover .flights-content p{
+    color: black;
+}
+.flights-box:hover .flights-content h2{
+    color: white;
+    opacity: 1;
+    transition: 0.5s;
+}
+.flights-box:hover .flights-read-more{
+    text-decoration: underline;
+}
+.flights-box:hover .flights-box-span{
+    color: rgb(152, 14, 33);
+}
+.clients{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.clients-container{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 105px;
+}
+.clients-bg{
+    width: 100%;
+    height: 400px;
+    background: url(../images/clients-img.png) no-repeat center fixed;
+    background-size: cover;
+    position: relative;
+}
+.clients-bg-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+.clients-container-content{
+    width: 100%;
+    overflow: auto;
+    padding-top: 145px;
+    position: absolute;
+}
+.clients-content{
+    width: 7.5%;
+    float: left;
+    margin-left: 14.5%;
+    text-align: center;
+    font-size: 20px;
+}
+.clients-div-icon{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+}
+.clients-div-icon:hover{
+    border: 2px solid rgb(175, 17, 38);
+}
+.clients-icon{
+    font-size: 45px;
+    color: rgb(175, 17, 38);
+    padding-bottom: 10px;
+    padding-top: 13px;
+}
+.clients-p{
+    color: white;
+    padding-top: 5px;
+    margin-left: -30px;
+}
+.footer{
+    background-color: rgb(152, 14, 33, 0.9);
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    margin-top: 20px;
+    overflow: auto;
+}
+.footer-box-img{
+    padding-top: 30px;
+}
+.footer-img{
+    height: 250px;
+    width: 400px;
+    border-radius: 10px;
+}
+.footer-box-icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px 5px;
+    background-color: white;
+    color: rgb(152, 14, 33);
+    opacity: 1;
+    transition: 0.5s;
+}
+.footer-icon{
+    font-size: 30px;
+    padding-top: 10px;
+}
+.footer-p{
+    color: rgba(0, 0, 0, 0.7);
+}
+.footer-box-icon:hover{
+    background-color: rgb(152, 14, 33);
+    color: white;
+    opacity: 1;
+    transition: 0.5s;
+}
